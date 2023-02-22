@@ -10,10 +10,15 @@
   "dependencies": {
     "@babel/runtime": "^7.20.6",
     "meteor-node-stubs": "^1.2.5",
-    "svelte": "^3.54.0"
+    "svelte": "^3.54.0",
+    "svelte-routing": "^1.6.0"
   },
   "devDependencies": {
     "svelte-preprocess": "^5.0.0"
+  },
+  "svelte:compiler": {
+    "hydratable": true,
+    "css": false
   },
   "meteor": {
     "mainModule": {
@@ -24,6 +29,10 @@
       "recompile": {
         "svelte": [
           "legacy"
+        ],
+        "svelte-routing": [
+          "client",
+          "server"
         ]
       }
     },

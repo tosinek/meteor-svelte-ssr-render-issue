@@ -1,9 +1,9 @@
-import { Meteor } from 'meteor/meteor';
-import App from '../imports/ui/App.svelte';
+import App from "/imports/ui/App.svelte";
+import { onPageLoad } from "meteor/server-render";
 
-
-Meteor.startup(() => {
+onPageLoad(() => {
   new App({
-    target: document.getElementById('app')
+    target: document.getElementById("app"),
+    hydrate: true,
   });
 });
